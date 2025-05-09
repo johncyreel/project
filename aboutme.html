@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyreel Manliguez</title>
+    <link rel="stylesheet" href="exercise1.css">
+</head>
+<body>
+
+    <div class="container">
+      <header class="header">
+        <div class="header-content">
+            <img src="jaycee.jpg" width="140" id="pic" alt="Profile Picture">
+            <h1>John Cyreel Manliguez</h1>
+        </div>
+    </header>
+    
+    <hr>
+    <div id="container">
+        <nav>
+            <h3>Navigation links</h3>
+            <a href="exercise1.html">Home Page</a><br>
+            <a href="aboutme.html">About Me</a><br>
+            <a href="skills-talent.html">Personal Skills</a><br>
+            <a href="cs.html">Contact Section<Section></Section></a>  
+          
+        </nav>  
+        <section> <!-- or use the <div> tag -->
+            <article>
+             <h2>ABOUT ME</h2>
+                
+              <h4><p>Hello, My name is John Cyreel P. Manliguez, and I am 20 years old.I am a 2nd year student taking up the course 
+                     Bachelor of Science in Information technology at Holy Name University. I enjoy learning how to code, and explore
+                     on other things. I am dedicated to grasp all the learning I gain and be able to apply it.</p>
+                    <p>I live in Saint Joseph Village, Dampas District Tagbilaran City. My father is a Seafarer and my mom is a Housewife. 
+                      I also have a younger sister. 
+                    </p>
+              
+
+            </article>  
+        </section> <!-- or use the </div> tag -->
+        <hr>
+        <h2 style="text-align: center; color: aliceblue;">Places I want to visit</h2>
+        <p style="text-align: center;">These are the places I wish to visit in the future.</p>
+
+        <div class="slider">
+          <div class="slide"><img src="Alps.webp" alt="Slide 1"></div>
+          <div class="slide"><img src="japan.avif" alt="Slide 2"></div>
+          <div class="slide"><img src="china.jpg" alt="Slide 3"></div>
+      </div>
+      <div class="slider-controls">
+          <button onclick="prevSlide()" class="slider-btn">Previous</button>
+          <button onclick="nextSlide()" class="slider-btn">Next</button>
+      </div>
+      
+    
+        <script>
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("slide");
+
+  function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[index].style.display = "block";
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  // Initialize the first slide
+  showSlide(slideIndex);
+
+
+</script>
+        <br><br><footer>
+            
+            <h3>COPYRIGHT 2025</h3>
+        </footer>
+    </div>
+    </div>
+</body>
+
+</html>
